@@ -50,20 +50,13 @@ deno add npm:metatune
 ## Usage
 
 ```ts
-import {
-  AppleMusic,
-  Deezer,
-  SoundCloud,
-  Spotify,
-  Tidal,
-  YTMusic,
-} from 'metatune';
+import { AppleMusic, Deezer, SoundCloud, Spotify, Tidal, YTMusic } from "metatune";
 
 // Search multiple tracks (default limit: 10)
-const songs = await Spotify.search('The Weeknd', 5);
+const songs = await Spotify.search("The Weeknd", 5);
 
 // Get the top matching track
-const song = await Tidal.metadata('Blinding Lights');
+const song = await Tidal.metadata("Blinding Lights");
 ```
 
 Every provider exposes the same interface:
@@ -74,47 +67,45 @@ provider.metadata(query: string): Promise<SongMetadata>
 ```
 
 ```ts
-import type { SongMetadata } from 'metatune';
+import type { SongMetadata } from "metatune";
 
 interface SongMetadata {
-  provider: 'spotify' | 'deezer' | 'apple' | 'tidal' | 'soundcloud' | 'youtube';
-  title: string;
-  artist: string;
-  album?: string;
-  coverUrl?: string;
-  url?: string;
-  durationMs?: number;
-  previewUrl?: string;
-  raw?: Record<string, unknown>;
+    provider: "spotify" | "deezer" | "apple" | "tidal" | "soundcloud" | "youtube";
+    title: string;
+    artist: string;
+    album?: string;
+    coverUrl?: string;
+    url?: string;
+    durationMs?: number;
+    previewUrl?: string;
+    raw?: Record<string, unknown>;
 }
 ```
 
 ## Providers
 
-| Export | Provider | Authentication |
-| --- | --- | --- |
-| `Spotify` | Spotify | Anonymous TOTP token generated automatically |
-| `Deezer` | Deezer | None |
-| `AppleMusic` | Apple Music | None |
-| `Tidal` | Tidal | Public web player token |
-| `SoundCloud` | SoundCloud | Public client ID resolved automatically |
-| `YTMusic` | YouTube Music | None |
+| Export       | Provider      | Authentication                               |
+| ------------ | ------------- | -------------------------------------------- |
+| `Spotify`    | Spotify       | Anonymous TOTP token generated automatically |
+| `Deezer`     | Deezer        | None                                         |
+| `AppleMusic` | Apple Music   | None                                         |
+| `Tidal`      | Tidal         | Public web player token                      |
+| `SoundCloud` | SoundCloud    | Public client ID resolved automatically      |
+| `YTMusic`    | YouTube Music | None                                         |
 
 `Spotify.metadata()` accepts a track URL or ID:
 
 ```ts
-await Spotify.metadata(
-  'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b'
-);
+await Spotify.metadata("https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b");
 ```
 
 ## Runtime support
 
-| Runtime | Status |
-| --- | --- |
-| Bun | Supported |
-| Deno | Supported |
-| Node.js 22+ | Supported |
+| Runtime         | Status                                                             |
+| --------------- | ------------------------------------------------------------------ |
+| Bun             | Supported                                                          |
+| Deno            | Supported                                                          |
+| Node.js 22+     | Supported                                                          |
 | Modern browsers | Supported through a bundler, subject to each service's CORS policy |
 
 The library uses only standard APIs: `fetch`, `URLSearchParams`, `TextEncoder`, and `crypto.subtle`.
