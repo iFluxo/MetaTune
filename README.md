@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iFluxo/MetaTune/main/assets/banner.png" alt="MetaTune — song metadata from six providers" width="100%" />
+  <img src="https://raw.githubusercontent.com/iFluxo/MetaTune/refs/heads/main/assets/banner.png" alt="MetaTune — song metadata from six providers" width="100%" />
 </p>
 
 <h1 align="center">MetaTune</h1>
