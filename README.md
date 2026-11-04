@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iFluxo/MetaTune/master/assets/banner.png" alt="MetaTune — song metadata from six providers" width="100%" />
+  <img src="https://raw.githubusercontent.com/iFluxo/MetaTune/main/assets/banner.png" alt="MetaTune — song metadata from six providers" width="100%" />
 </p>
 
 <h1 align="center">MetaTune</h1>
@@ -12,8 +12,8 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/metatune"><img src="https://img.shields.io/npm/v/metatune.svg?style=for-the-badge&logo=npm&logoColor=red" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/metatune"><img src="https://img.shields.io/npm/dt/metatune.svg?style=for-the-badge&logo=npm&logoColor=red" alt="npm downloads" /></a>
-  <a href="https://github.com/iFluxo/MetaTune/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/metatune.svg?style=for-the-badge" alt="license" /></a>
-  <a href="https://github.com/iFluxo/MetaTune/actions/workflows/ci.yml"><img src="https://github.com/iFluxo/MetaTune/actions/workflows/ci.yml/badge.svg?branch=master&style=for-the-badge" alt="CI" /></a>
+  <a href="https://github.com/iFluxo/MetaTune/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/metatune.svg?style=for-the-badge" alt="license" /></a>
+  <a href="https://github.com/iFluxo/MetaTune/actions/workflows/ci.yml"><img src="https://github.com/iFluxo/MetaTune/actions/workflows/ci.yml/badge.svg?branch=main&style=for-the-badge" alt="CI" /></a>
 </p>
 
 <p align="center">
