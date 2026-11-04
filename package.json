@@ -1,0 +1,60 @@
+{
+    "name": "metatune",
+    "version": "1.0.0",
+    "description": "MetaTune — song metadata from Spotify, Deezer, Apple Music, Tidal, SoundCloud, and YouTube Music with zero config and zero dependencies",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "browser": "./dist/index.js",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "assets",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "bun build src/index.ts --target=node --format=esm --outdir=dist && tsc -p tsconfig.build.json",
+        "typecheck": "tsc --noEmit",
+        "demo": "bun run build && bun examples/demo.mjs",
+        "prepublishOnly": "bun run build"
+    },
+    "keywords": [
+        "bun",
+        "deno",
+        "node",
+        "music",
+        "metadata",
+        "spotify",
+        "deezer",
+        "apple-music",
+        "tidal",
+        "soundcloud",
+        "youtube-music"
+    ],
+    "license": "MIT",
+    "author": "iFluxo",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iFluxo/MetaTune.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iFluxo/MetaTune/issues"
+    },
+    "homepage": "https://github.com/iFluxo/MetaTune#readme",
+    "engines": {
+        "node": ">=22",
+        "bun": ">=1.0"
+    },
+    "devDependencies": {
+        "typescript": "^7.0.2"
+    }
+}
